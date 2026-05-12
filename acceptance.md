@@ -20,10 +20,21 @@
 ## Task 2: Implement data normalization utilities
 
 ### Acceptance Criteria
-- [ ] is_iterable: returns True for lists and iterables, False for strings and dicts
-- [ ] as_list: convert dict {k: v} to list ["k=v"], convert string to list, pass through list
-- [ ] as_dict: convert list ["k=v", "k2"] to dict {"k": "v", "k2": None}, handle string input
-- [ ] normalize_ulimit: parse soft/hard limits from dict {"soft": x, "hard": y} to "x:y" format
-- [ ] time_to_seconds: parse "3m", "30s", "1m30s", "90" to integer seconds
-- [ ] version_compare: compare version strings like "4.5.0" vs "4.6.0" correctly
-- [ ] parse_short_mount: parse short volume syntax "/host:/container:opts" to mount dict
+- [x] is_iterable: returns True for lists and iterables, False for strings and dicts
+- [x] as_list: convert dict {k: v} to list ["k=v"], convert string to list, pass through list
+- [x] as_dict: convert list ["k=v", "k2"] to dict {"k": "v", "k2": None}, handle string input
+- [x] normalize_ulimit: parse soft/hard limits from dict {"soft": x, "hard": y} to "x:y" format
+- [x] time_to_seconds: parse "3m", "30s", "1m30s", "90" to integer seconds
+- [x] version_compare: compare version strings like "4.5.0" vs "4.6.0" correctly
+- [x] parse_short_mount: parse short volume syntax "/host:/container:opts" to mount dict
+
+## Task 3: Implement recursive substitution and merge functions
+
+### Acceptance Criteria
+- [ ] rec_subs applies variable substitution recursively to dicts, lists, and strings
+- [ ] rec_subs handles environment variables in service definitions with correct priority
+- [ ] rec_subs substitutes variables in dictionary keys as well as values
+- [ ] rec_merge merges two dictionaries recursively, updating nested dicts
+- [ ] rec_merge appends to lists rather than replacing them
+- [ ] rec_merge handles volumes specially to avoid duplicate mount targets
+- [ ] clone function creates shallow copies of lists and dicts
