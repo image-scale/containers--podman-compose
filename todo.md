@@ -4,8 +4,8 @@
 Start with core utility functions for variable interpolation and data normalization since these are fundamental building blocks. Then implement the compose file parsing and service handling. Build up to container argument generation, network/volume handling, and finally the CLI interface with commands.
 
 ## Tasks
-- [>] Task 1: Implement variable interpolation for compose files - support bash-style variable substitution ($VAR, ${VAR}, ${VAR:-default}, ${VAR:?error}, etc.) with nested variable support
-- [ ] Task 2: Implement data normalization utilities - convert between list/dict formats, normalize ulimits, time string parsing, version comparison, and short mount path parsing
+- [x] Task 1: Implement variable interpolation for compose files - support bash-style variable substitution ($VAR, ${VAR}, ${VAR:-default}, ${VAR:?error}, etc.) with nested variable support
+- [>] Task 2: Implement data normalization utilities - convert between list/dict formats, normalize ulimits, time string parsing, version comparison, and short mount path parsing
 - [ ] Task 3: Implement recursive substitution and merge functions - apply variable interpolation recursively through compose data structures, merge compose files together
 - [ ] Task 4: Implement service normalization - normalize service definitions including build config, commands, environment, depends_on, volumes
 - [ ] Task 5: Implement dependency resolution - parse service dependencies, resolve recursive dependencies, calculate dependents graph
